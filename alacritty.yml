@@ -1,0 +1,15 @@
+font:
+  size: 13.0
+  normal:
+    family: ShureTechMono Nerd Font
+  italic:
+    family: Iosevka Nerd Font Mono
+
+window:
+  dynamic_padding: true
+
+key_bindings:
+  - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
+
+cursor:
+  smooth_factor: 0.1
