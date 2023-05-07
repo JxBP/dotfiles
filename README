@@ -13,8 +13,8 @@ of my dotfiles enter the following command:
 Without the brackets. Don't pass any package name to symlink all. Uninstalling
 or rather unlinking works the same but using 'unlink' instead of 'link'.
 
-If you want to use my dotfiles as a basis but want to add more then have a look
-at the '[ CONFIGURATION ]' section of manage.pl and add it there.
+If you want to use my dotfiles as a basis but want to add more, then have a look
+at the 'CONFIGURATION' section of manage.pl and add it there.
 
 Why this Perl script and not X?
 -------------------------------
@@ -23,5 +23,5 @@ offer. I have used GNU stow before and while it worked great I didn't like the
 directory structure it required.
 Maybe in the future I'll switch to something like chezmoi but right now I like
 my current solution.
-A bare git repository is also an option I considered but I ultimately I preferred
+A bare git repository is also an option I considered, but ultimately I preferred
 having all my dotfiles in one place and symlinking them.
