@@ -16,6 +16,14 @@ or rather unlinking works the same but using 'unlink' instead of 'link'.
 If you want to use my dotfiles as a basis but want to add more, then have a look
 at the 'CONFIGURATION' section of manage.pl and add it there.
 
+A note on Zsh
+-------------
+My manage.pl script by default links my Zsh configuration to $HOME/.config/zsh
+which requires the ZDOTDIR environment variable to be set to that directory.
+But you can also just change the directory. If you have the pam_env PAM module
+available you can just create a .pam_environment file  in your home directory
+to set ZDOTDIR. See pam_env(8) for more information.
+
 Why this Perl script and not X?
 -------------------------------
 I don't really need any of the features "modern" dotfiles managers like chezmoi
