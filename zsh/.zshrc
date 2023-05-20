@@ -14,7 +14,7 @@ append_path $HOME/.config/emacs/bin
 
 alias ls='exa -lg'
 alias la='exa -la'
-alias cd='z'
+# alias cd='z'
 alias grep='rg'
 alias cat='bat -p'
 alias vvim='/usr/bin/vim'
