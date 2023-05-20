@@ -1,0 +1,13 @@
+target
+zig-cache
+node_modules
+build
+venv
+ReSe
+.config/discord
+.config/chromium
+.local
+.vscode-oss
+.cache
+.var
+.m2
