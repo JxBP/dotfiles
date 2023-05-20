@@ -1,7 +1,9 @@
 font:
-  size: 13.0
+  # size: 10.0
+  size: 12
   normal:
-    family: ShureTechMono Nerd Font
+    # family: Dina
+    family: Iosevka Nerd Font
   italic:
     family: Iosevka Nerd Font Mono
 
@@ -10,6 +12,5 @@ window:
 
 key_bindings:
   - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
-
 cursor:
-  smooth_factor: 0.1
+  style: Beam
