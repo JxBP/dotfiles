@@ -16,6 +16,11 @@ or rather unlinking works the same but using 'unlink' instead of 'link'.
 If you want to use my dotfiles as a basis but want to add more, then have a look
 at the 'CONFIGURATION' section of manage.pl and add it there.
 
+What is config.def.h?
+------------
+That is my config file for dwm (a dynamic window manager for X). You can find
+more information about it on the project http://dwm.suckless.org/ website.
+
 A note on Zsh
 -------------
 My manage.pl script by default links my Zsh configuration to $HOME/.config/zsh
