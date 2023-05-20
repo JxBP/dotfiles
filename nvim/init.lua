@@ -21,3 +21,7 @@ end
 
 -- vim.cmd([[autocmd VimEnter * :ZenMode]])
 -- vim.cmd([[autocmd VimEnter * Twilight]])
+
+vim.api.nvim_create_autocmd({ "VimLeave" }, {
+	command = "set guicursor=a:ver100",
+})

@@ -15,7 +15,7 @@ vim.g.netrw_banner = 0
 -- Custom options
 vim.g.format_on_save = true
 vim.g.jxbp_transparent_bg = false
-vim.g.jxbp_colorscheme = "gruvbox-material"
+vim.g.jxbp_colorscheme = "onedark"
 
 if vim.g.neovide then
 	vim.o.guifont = "Iosevka Nerd Font Mono:h12"

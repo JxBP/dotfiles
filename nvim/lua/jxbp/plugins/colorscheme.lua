@@ -20,4 +20,13 @@ end
 return {
 	{ "shaunsingh/solarized.nvim", config = apply_color("solarized") },
 	{ "sainnhe/gruvbox-material", config = apply_color("gruvbox-material") },
+	{
+		"navarasu/onedark.nvim",
+		config = function()
+			require("onedark").setup({
+				style = "dark",
+			})
+			apply_color("onedark")()
+		end,
+	},
 }
