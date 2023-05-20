@@ -14,3 +14,5 @@ key_bindings:
   - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
 cursor:
   style: Beam
+env:
+  TERM: xterm-256color
