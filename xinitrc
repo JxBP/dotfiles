@@ -11,8 +11,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 export ZDOTDIR="$HOME/.config/zsh"
 
-export QT_STYLE_OVERRIDE=adwaita-dark
-
+export QT_QPA_PLATFORMTHEME=qt5ct
 # Disable client-side GTK decorations
 # export GTK_CSD=0
 # export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0
@@ -24,7 +23,7 @@ setxkbmap us
 
 xrandr --output HDMI-1 --primary --auto --output VGA-1 --right-of HDMI-1 --auto --output LVDS-1 --off
 
-feh --no-fehbg --bg-fill "$HOME/Media/Pictures/firewatch.jpg"
+feh --no-fehbg --bg-fill "$HOME/Media/Pictures/Jammy-Jellyfish_WP_1920x1080.png"
 
 # Window effects like blur
 # picom &
