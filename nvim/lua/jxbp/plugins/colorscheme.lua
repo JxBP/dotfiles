@@ -14,6 +14,8 @@ local apply_color = function(colorscheme)
 				vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 			end
 		end
+	else
+		return function() end
 	end
 end
 
