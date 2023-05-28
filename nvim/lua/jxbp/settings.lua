@@ -19,12 +19,5 @@ vim.g.jxbp_colorscheme = "gruvbox-material"
 
 if vim.g.neovide then
 	vim.o.guifont = "Iosevka Nerd Font Mono:h12"
-	vim.g.neovide_cursor_animation_length = 0.02
-
-	-- vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter" }, {
-	-- 	pattern = "*",
-	-- 	callback = function()
-	-- 		vim.cmd("color gruvbox-material")
-	-- 	end,
-	-- })
+	vim.g.neovide_cursor_animation_length = 0.03
 end
