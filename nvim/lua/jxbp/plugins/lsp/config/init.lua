@@ -3,13 +3,20 @@ local M = {}
 M.setup = function()
 	local lsp = require("lsp-zero")
 	local mappings = require("jxbp.plugins.lsp.config.mappings")
+	local navic = require("nvim-navic")
 
 	lsp.preset("recommended")
 	lsp.ensure_installed({ "rust_analyzer" })
 	lsp.setup_nvim_cmp({ mapping = mappings.completions })
 	lsp.set_preferences({ set_lsp_keymaps = false })
 	lsp.nvim_workspace({ library = vim.api.nvim_get_runtime_file("", true) })
-	lsp.on_attach(mappings.general)
+	lsp.on_attach(function(client, bufnr)
+		mappings.general(client, bufnr)
+		if client.server_capabilities.documentSymbolProvider then
+			print("Attached navic")
+			navic.attach(client, bufnr)
+		end
+	end)
 
 	-- rust tools
 	lsp.skip_server_setup({ "rust_analyzer" })
