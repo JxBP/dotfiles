@@ -21,6 +21,7 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export OPAMROOT="$XDG_DATA_HOME/opam"
 # export GNUPGHOME="$XDG_DATA_HOME/gnupg" - See arch wiki note
 
 export EXA_COLORS=$(vivid generate molokai)

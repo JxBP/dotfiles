@@ -40,6 +40,7 @@ M.setup = function(server_opts)
 			null_ls.builtins.formatting.taplo,
 			null_ls.builtins.formatting.gofmt,
 			null_ls.builtins.formatting.zigfmt,
+			null_ls.builtins.formatting.ocamlformat,
 		},
 	})
 end

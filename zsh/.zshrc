@@ -49,9 +49,13 @@ function alt_prompt {
 }
 
 eval "$(zoxide init zsh)"
+
 bindkey -s '^j' 'ls^M'
 
 . "${CARGO_HOME}/env"
+
+# opam
+[[ ! -r "$OPAMROOT/opam-init/init.zsh" ]] || source "$OPAMROOT/opam-init/init.zsh" > /dev/null 2> /dev/null
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
