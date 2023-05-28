@@ -27,7 +27,8 @@ vim.keymap.set("n", "<leader>ct", ":tabclose<CR>", { desc = "Close the current t
 -- Telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find file" })
-vim.keymap.set("n", "<C-S-p>", builtin.git_files, { desc = "Find git file" })
+vim.keymap.set("n", "<M-p>", builtin.buffers, { desc = "Find buffer" })
+vim.keymap.set("n", "<C-M-p>", builtin.git_files, { desc = "Find git file" })
 vim.keymap.set("n", "<leader>pg", builtin.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>pf", builtin.git_files, { desc = "Find git file" })
 vim.keymap.set("n", "<leader>bg", builtin.buffers, { desc = "View buffers" })
