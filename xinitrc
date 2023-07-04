@@ -35,6 +35,8 @@ export "$(gnome-keyring-daemon --start)"
 
 # screenkey &
 
+/usr/bin/keepassxc &
+
 /usr/bin/pipewire &
 
 exec dwm

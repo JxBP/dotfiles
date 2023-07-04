@@ -41,6 +41,7 @@ M.setup = function(server_opts)
 			null_ls.builtins.formatting.gofmt,
 			null_ls.builtins.formatting.zigfmt,
 			null_ls.builtins.formatting.ocamlformat,
+			null_ls.builtins.formatting.mix,
 		},
 	})
 end

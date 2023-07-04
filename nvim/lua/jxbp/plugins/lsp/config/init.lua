@@ -13,10 +13,12 @@ M.setup = function()
 	lsp.on_attach(function(client, bufnr)
 		mappings.general(client, bufnr)
 		if client.server_capabilities.documentSymbolProvider then
-			print("Attached navic")
 			navic.attach(client, bufnr)
 		end
 	end)
+
+	-- Mason's OCaml LSP is outdated unfortunately
+	require("lspconfig").ocamllsp.setup({})
 
 	-- rust tools
 	lsp.skip_server_setup({ "rust_analyzer" })
