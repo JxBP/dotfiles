@@ -27,6 +27,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
+    {"KeePassXC", "keepassxc", "Unlock Database - KeePassXC", 1, 1, -1},
+    {"KeePassXC", "keepassxc", "KeePassXC - Browser Access Request", 1, 1, -1},
+    {"KeePassXC", NULL,       NULL,       1 << 7,       0,           -1 },
+    {"LibreWolf", NULL,       NULL,       1,            0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1,            0,           -1 },
 	{ "firefox",  NULL,       NULL,       1,            0,           -1 },
     { "discord",  NULL,       NULL,       1 << 8,       0,           -1 },
