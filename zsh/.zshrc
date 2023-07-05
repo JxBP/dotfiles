@@ -39,12 +39,14 @@ function print_ip {
 # PS1 prompt
 # eval $(starship init zsh)
 # export PROMPT="[%n@%m %~]\$ "
-export PROMPT="%~$ "
+RESET="%F{reset_color}"
+GREEN="%F{green}"
+CYAN="%F{cyan}"
+BLUE="%F{blue}"
+
+export PROMPT="${GREEN}%n@%m${RESET}:${BLUE}%~${RESET}$ "
 
 function alt_prompt {
-    RESET="%{$reset_color%}"
-    GREEN="%{$fg[green]%}"
-    CYAN="%{$fg[cyan]%}"
     export PROMPT="%n@%m ${CYAN}%~ ${RESET}$ "
 }
 
