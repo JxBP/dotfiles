@@ -1,0 +1,43 @@
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+[merge]
+    conflictstyle = diff3
+    tool = meld
+[diff]
+    colorMoved = default
+[init]
+	defaultBranch = master
+[pull]
+    rebase = true
+
+[user]
+	name = JxBP
+    signingkey = 855AFA198456276F
+    email = "61627369+JxBP@users.noreply.github.com"
+
+[commit]
+gpgsign = true
+
+[includeIf "hasconfig:remote.*.url:https://gitlab.com/**"]
+    path = config-gitlab
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:*/**"]
+    path = config-gitlab
+
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+    path = config-github
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+    path = config-github
+
+[url "git@berrycloud.local:"]
+	insteadOf = https://berrycloud.local/
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

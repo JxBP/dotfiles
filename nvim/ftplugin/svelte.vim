@@ -1,0 +1,1 @@
+autocmd BufWritePre *.svelte :LspZeroFormat

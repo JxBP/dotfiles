@@ -1,0 +1,13 @@
+#!/bin/sh
+# Choose between pinentry-curses and pinentry-gnome3 based on whether
+# $PINENTRY_USER_DATA is sset to MODE=TUI
+set -ue
+
+# Use pinentry-tty if $PINENTRY_USER_DATA contains USE_TTY=1
+if [ "${PINENTRY_USER_DATA}" = "MODE=TUI" ]; then
+	exec pinentry-curses "$@"
+else
+    exec pinentry-gnome3 "$@"
+fi
+
+exit 1
