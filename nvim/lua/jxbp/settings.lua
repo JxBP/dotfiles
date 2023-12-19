@@ -19,8 +19,6 @@ vim.opt.statuscolumn = "%s%=%{v:relnum?v:relnum:v:lnum} "
 
 -- Custom options
 vim.g.jxbp_format_on_save = true
-vim.g.jxbp_transparent_bg = true
-vim.g.jxbp_colorscheme = "gruvbox-material"
 
 if vim.g.neovide then
     vim.o.guifont = "Iosevka Nerd Font Mono:h12"

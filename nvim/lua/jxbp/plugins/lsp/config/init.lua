@@ -43,11 +43,16 @@ M.setup = function()
     cmp.setup({
         ---@diagnostic disable-next-line: missing-fields
         window = {
-            completion = cmp.config.window.bordered({ border = "none", scrollbar = false }),
-            documentation = cmp.config.window.bordered({
-                border = "solid",
+            completion = {
+                winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+                border = 'none',
                 scrollbar = false,
-            }),
+            },
+            documentation = {
+                winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+                border = 'solid',
+                scrollbar = false,
+            },
         },
         snippet = {
             expand = function(args)
@@ -61,6 +66,13 @@ M.setup = function()
         }, {
             { name = "buffer" },
         }),
+        ---@diagnostic disable-next-line: missing-fields
+        formatting = {
+            format = function(_, vim_item)
+                vim_item.kind = require("jxbp.plugins.lsp.config.kind_icons")[vim_item.kind] or "?"
+                return vim_item
+            end,
+        },
     })
 
     require("mason").setup()
