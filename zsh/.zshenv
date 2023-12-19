@@ -34,7 +34,6 @@ export EDITOR='nvim'
 export GPG_TTY=$(tty)
 export NVM_SYMLINK_CURRENT=true
 export CHROME_EXECUTABLE="$(which chromium)"
-export PATH="$PATH:$HOME/.local/bin/:$HOME/.config/emacs/bin:$XDG_DATA_HOME/flutter/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$HOME/.local/share/bob/nvim-bin"
 export RUSTC_WRAPPER=sccache
 export PINENTRY_USER_DATA="MODE=TUI" # See $DOTFILES/bin/my-pinentry
 
@@ -47,4 +46,14 @@ export SAVEHIST=1000
 export setopt appendhistory
 
 export DOTFILES="$HOME/dotfiles"
-export PATH="$PATH:$HOME/dotfiles/bin"
+
+PATH_DIRS=(
+    "$HOME/.local/bin/"
+    "$XDG_CONFIG_HOME/emacs/bin"
+    "$XDG_DATA_HOME/flutter/bin"
+    "$ANDROID_HOME/cmdline-tools/latest/bin"
+    "$XDG_DATA_HOME/bob/nvim-bin"
+    "$XDG_DATA_HOME/npm/bin"
+    "$DOTFILES/_bin"
+)
+export PATH="$PATH:$(IFS=: ; echo "${PATH_DIRS[*]}")"
