@@ -25,7 +25,6 @@ if vim.g.neovide then
     vim.g.neovide_cursor_animation_length = 0.03
 end
 
--- For jxbp_format_on_save
 vim.api.nvim_create_user_command("ToggleFormatOnSave", function()
-    vim.g.format_on_save = not vim.g.format_on_save
+    vim.g.jxbp_format_on_save = not vim.g.jxbp_format_on_save
 end, {})
