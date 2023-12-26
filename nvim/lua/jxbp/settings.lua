@@ -28,3 +28,14 @@ end
 vim.api.nvim_create_user_command("ToggleFormatOnSave", function()
     vim.g.jxbp_format_on_save = not vim.g.jxbp_format_on_save
 end, {})
+
+-- Go to our workspace root if the LSP gives us one
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(_)
+        local dir = vim.lsp.buf.list_workspace_folders()[1]
+        if dir then
+            vim.opt.autochdir = false
+            vim.api.nvim_set_current_dir(dir)
+        end
+    end,
+})
