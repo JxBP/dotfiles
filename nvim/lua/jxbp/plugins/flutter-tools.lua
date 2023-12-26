@@ -9,5 +9,8 @@ return {
         widget_guides = {
             enabled = true,
         },
+        lsp = {
+            on_attach = require("jxbp.plugins.lsp.formatting")
+        }
     },
 }
