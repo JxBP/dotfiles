@@ -75,6 +75,8 @@ M.setup = function()
         },
     })
 
+    vim.filetype.add({ extension = { templ = "templ" } })
+
     require("mason").setup()
     local mason_lspconfig = require("mason-lspconfig")
     mason_lspconfig.setup({
@@ -93,6 +95,11 @@ M.setup = function()
         ["clangd"] = function()
             lspconfig_setup("clangd", {
                 filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }, -- No proto(buf)
+            })
+        end,
+        ["html"] = function()
+            lspconfig_setup("html", {
+                filetypes = { "html", "gohtmltmpl" }
             })
         end,
         ["rust_analyzer"] = function()
@@ -121,6 +128,14 @@ M.setup = function()
                     format_on_save(client, bufnr)
                     -- require("virtualtypes").on_attach(client, bufnr)
                 end
+            })
+        end,
+        ["tailwindcss"] = function()
+            lspconfig_setup("tailwindcss", {
+                filetypes = { "html", "templ" },
+                init_options = {
+                    userLanguages = { templ = "html" }
+                }
             })
         end,
         ["typst_lsp"] = function()
