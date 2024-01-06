@@ -59,6 +59,30 @@ return {
     ),
 
     ls.s(
+        {
+            trig = "ifci",
+            name = "if call error inline",
+            dscr =
+            "Call function and check the error inline"
+        },
+        fmt(
+            [[
+        if {err1} := {func}({args}); {err2} != nil {{
+          return {err3}
+        }}
+        {finally}
+      ]], {
+                err1    = ls.i(1, { "err" }),
+                func    = ls.i(2, { "func" }),
+                args    = ls.i(3, { "args" }),
+                err2    = rep(1),
+                err3    = ls.d(4, util.make_return_nodes, { 1 }),
+                finally = ls.i(0),
+            }),
+        in_func
+    ),
+
+    ls.s(
         { trig = "fn", name = "Function", dscr = "Create a function or a method" },
         fmt(
             [[
@@ -190,4 +214,20 @@ return {
         }),
         in_test_file
     ),
+
+    ls.s(
+        { trig = "route", name = "echo route handler", dscr = "Create echo route handler function" },
+        fmt(
+            [[
+        func ({this} *{ctx}) {name}(c echo.Context) error {{
+          {finally}
+        }}
+            ]], {
+                this    = ls.i(1),
+                ctx     = ls.i(2),
+                name    = ls.i(3),
+                finally = ls.i(0),
+            }
+        )
+    )
 }

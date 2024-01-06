@@ -11,12 +11,12 @@ end
 -- Luasnip --
 -------------
 local ls = require("luasnip")
-vim.keymap.set({ "i", "s" }, "<C-j>", function()
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
     if ls.expand_or_jumpable() then
         ls.expand_or_jump()
     end
 end, { desc = "LuaSnip forward", silent = true })
-vim.keymap.set({ "i", "s" }, "<C-k>", function()
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
     if ls.jumpable(-1) then
         ls.jump(-1)
     end
