@@ -134,6 +134,8 @@ pipewire &
 WALLPAPER=$HOME/Pictures/wallpapers/astronaut-gruvbox.png
 swaybg -i "$WALLPAPER" &
 
+dbus-update-activation-environment --all
+
 sandbar \
     -font "Terminus:size=8" \
     -active-fg-color '282828' \
