@@ -32,7 +32,7 @@ tar                                 \
 # tar may exit with an error if it doesn't have to permission to read some file
 # so this could get annoying if set before tar. We don't want to delete the tar
 # file if compression fails though.
-setopt -e
+set -e
 
 zstd "${BACKUP_NAME}.tar"
 
