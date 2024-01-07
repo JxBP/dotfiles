@@ -1,8 +1,1 @@
-My river config attempts to start sandbar which is a dwm-like bar.
-There is a git submodule to easily install sandbar. You only need to execute
-the following command to download it:
-
-    git submodule update --init --recursive
-
-After that go into ./sandbar (from this README's directory out) and compile and
-install sandbar using 'make install'.
+TODO: Add notice about rivercarro
