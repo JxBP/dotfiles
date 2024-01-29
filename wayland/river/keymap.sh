@@ -13,10 +13,15 @@ rmap Super+Shift J swap next;
 rmap Super+Shift K swap previous;
 rmap Super+Shift Return zoom;
 
-rmap Super H send-layout-cmd rivertile "main-ratio -0.05";
-rmap Super L send-layout-cmd rivertile "main-ratio +0.05";
-rmap Super+Shift H send-layout-cmd rivertile "main-count +1";
-rmap Super+Shift L send-layout-cmd rivertile "main-count -1";
+# rmap Super H send-layout-cmd rivertile "main-ratio -0.05";
+# rmap Super L send-layout-cmd rivertile "main-ratio +0.05";
+# rmap Super+Shift H send-layout-cmd rivertile "main-count +1";
+# rmap Super+Shift L send-layout-cmd rivertile "main-count -1";
+
+rmap Super H send-layout-cmd rivercarro "main-ratio -0.05";
+rmap Super L send-layout-cmd rivercarro "main-ratio +0.05";
+rmap Super+Shift H send-layout-cmd rivercarro "main-count +1";
+rmap Super+Shift L send-layout-cmd rivercarro "main-count -1";
 
 rmap Super+Alt H move left 100;
 rmap Super+Alt J move down 100;
