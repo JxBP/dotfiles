@@ -95,6 +95,7 @@ M.setup = function()
         ["clangd"] = function()
             lspconfig_setup("clangd", {
                 filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }, -- No proto(buf)
+                on_attach = function() end
             })
         end,
         ["html"] = function()
