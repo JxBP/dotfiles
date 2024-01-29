@@ -7,7 +7,7 @@ my $HOME     = glob("~");
 my $LOGS_DIR = "/tmp/river_logs";
 
 mkdir $LOGS_DIR;
-die "Error creating logs directory: $!\n" unless $!{EEXIST};
+die "Error creating logs directory: $!\n" unless $!{EEXIST} || !$!;
 
 open STDOUT, '>', "$LOGS_DIR/init.log" or die "error redirecting STDOUT to logfile: $!";
 open STDERR, '>&STDOUT' or die "Can't dup STDOUT: $!";
@@ -28,6 +28,8 @@ daemon "/usr/bin/gpg-agent", "--server";
 daemon "/usr/bin/pipewire";
 daemon "$HOME/.local/share/cargo/bin/ra-multiplex-server";
 daemon "/usr/bin/kanshi";
+daemon "/usr/bin/dunst";
+daemon "/usr/bin/aa-notify -p -s 1 -w 10 -f /var/log/audit/audit.log";
 daemon "/usr/bin/swaybg", "-i", "$HOME/Pictures/wallpapers/astronaut-gruvbox.png";
 daemon "/usr/bin/sandbar", qw(
     -active-fg-color    282828
