@@ -26,19 +26,14 @@ end)
 local act = wezterm.action
 local config = {
     font = wezterm.font_with_fallback({ "Fira Code", "DinaRemaster" }),
-    --[[ font_rules = {
-        {
-            italic = true,
-            font = wezterm.font({ family = fonts.Monaspace_Radon, italic = true })
-        }
-    },]] --
     font_size = 10,
     color_scheme = "GruvboxDarkHard",
     colors = {
-        background = "#131415",
+        -- background = "#131415",
+        background = "#231719",
         foreground = "#ddc7a1"
     },
-    window_background_opacity = 1,
+    window_background_opacity = 0.95,
     enable_tab_bar = true,
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
