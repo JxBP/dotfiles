@@ -3,6 +3,7 @@ config_modules=(
     zinit
     ps1
     highlighting
+    hist
 )
 
 for mod in ${config_modules[@]}

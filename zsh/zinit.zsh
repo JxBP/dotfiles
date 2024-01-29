@@ -28,6 +28,7 @@ zinit light-mode for \
 zi snippet OMZP::colored-man-pages
 zinit load zdharma-continuum/history-search-multi-word
 zinit load zsh-users/zsh-completions
+zinit load atuinsh/atuin
 
 autoload -Uz compinit 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
