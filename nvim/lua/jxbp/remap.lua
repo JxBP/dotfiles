@@ -33,7 +33,7 @@ end, { desc = "LuaSnip alternative", silent = true })
 nmap("<leader>pv", vim.cmd.Ex, "Open netrw")
 nmap("<leader>lI", vim.cmd.LspInfo, "LSP Info")
 nmap("<leader>U", vim.cmd.UndotreeToggle, "Toggle undo tree")
-
+nmap("<leader>Cx", "!chmod u+x expand('%:p')", "Make executable")
 
 ---------
 -- DAP --

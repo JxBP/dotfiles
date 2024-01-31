@@ -2,6 +2,7 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.15",
+        lazy = true,
         pin = true,
         dependencies = {
             "nvim-lua/plenary.nvim",

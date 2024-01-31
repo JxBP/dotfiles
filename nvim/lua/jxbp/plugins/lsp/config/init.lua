@@ -19,8 +19,6 @@ local lspconfig_setup = function(server, opts)
 end
 
 M.setup = function()
-    require("neodev").setup({})
-
     local lsp_cmds = vim.api.nvim_create_augroup("lsp_attach", { clear = true })
     vim.api.nvim_create_autocmd("LspAttach", {
         desc = "LSP actions",
@@ -113,6 +111,7 @@ M.setup = function()
                         telemetry = { enable = false },
                     },
                 },
+                before_init=require("neodev.lsp").before_init
             })
         end,
         ["ocamllsp"] = function()

@@ -37,6 +37,7 @@ return {
             vim.g.gruvbox_material_diagnostic_line_highlight = 1
             vim.g.gruvbox_material_diagnostic_virtual_text = 1
             vim.g.gruvbox_material_transparent_background = 1
+            vim.g.gruvbox_material_better_performance = 1
             color("gruvbox-material")()
         end
     },

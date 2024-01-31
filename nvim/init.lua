@@ -1,3 +1,5 @@
+vim.loader.enable()
+
 -- This needs to be done before lazy.nvim
 vim.g.mapleader = " "
 

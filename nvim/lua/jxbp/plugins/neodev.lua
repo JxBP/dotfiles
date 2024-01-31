@@ -1,6 +1,10 @@
 return {
     {
         "folke/neodev.nvim",
-        config = true,
+        ft = "lua",
+        opts = {
+            lspconfig = false,
+            setup_jsonls = false,
+        }
     },
 }
