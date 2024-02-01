@@ -25,15 +25,15 @@ end)
 
 local act = wezterm.action
 local config = {
-    font = wezterm.font_with_fallback({ "Fira Code", "DinaRemaster" }),
-    font_size = 10,
+    font = wezterm.font_with_fallback({ "CaskaydiaCove Nerd Font Mono", "Fira Code", "DinaRemaster" }),
+    font_size = 11,
     color_scheme = "GruvboxDarkHard",
     colors = {
         -- background = "#131415",
         background = "#231719",
         foreground = "#ddc7a1"
     },
-    window_background_opacity = 0.95,
+    window_background_opacity = 1,
     enable_tab_bar = true,
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
@@ -47,9 +47,11 @@ local config = {
     disable_default_key_bindings = true,
     leader = { key = "b", mods = "CTRL" },
     keys = {
+        { key = "F", mods = "CTRL|SHIFT",  action = act.Search("CurrentSelectionOrEmptyString") },
+
         -- tmux "emulation"
         -- C-b C-b actually sends C-b to the terminal
-        { key = "b", mods = "LEADER|CTRL",  action = act({ SendString = "\x02" }) },
+        { key = "b", mods = "LEADER|CTRL", action = act({ SendString = "\x02" }) },
         {
             key = "\\",
             mods = "LEADER",
@@ -97,7 +99,7 @@ local config = {
         { key = "z", mods = "LEADER",       action = act.TogglePaneZoomState },
         { key = "&", mods = "LEADER|SHIFT", action = act({ CloseCurrentTab = { confirm = true } }) },
         { key = "x", mods = "LEADER",       action = act({ CloseCurrentPane = { confirm = true } }) },
-        { key = "F", mods = "SHIFT|CTRL",   action = "ToggleFullScreen" },
+        { key = "M", mods = "SHIFT|CTRL",   action = "ToggleFullScreen" },
         { key = "?", mods = "LEADER|SHIFT", action = act({ Search = { Regex = "" } }) },
         { key = "v", mods = "CTRL|SHIFT",   action = act.PasteFrom("Clipboard") },
         { key = "c", mods = "CTRL|SHIFT",   action = act.CopyTo("Clipboard") },
