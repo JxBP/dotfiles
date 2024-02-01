@@ -23,5 +23,18 @@ return {
                 },
             },
         },
+        keys = function()
+            local builtin = require("telescope.builtin")
+            return {
+                { "<C-p>",      builtin.find_files,  desc = "Find file" },
+                { "<M-p>",      builtin.buffers,     desc = "Find buffer" },
+                { "<C-M-p>",    builtin.git_files,   desc = "Find git file" },
+                { "<C-f>",      builtin.live_grep,   desc = "Live grep" },
+                { "<leader>pg", builtin.live_grep,   desc = "Live grep" },
+                { "<leader>pf", builtin.git_files,   desc = "Find git file" },
+                { "<leader>bb", builtin.buffers,     desc = "View buffers" },
+                { "<leader>ld", builtin.diagnostics, desc = "View diagnostics" },
+            }
+        end
     },
 }
