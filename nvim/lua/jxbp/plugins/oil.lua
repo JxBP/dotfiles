@@ -8,6 +8,8 @@ return {
             "size",
         }
     },
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = {
+        { "nvim-tree/nvim-web-devicons", lazy = true }
+    },
     lazy = true,
 }

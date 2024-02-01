@@ -13,6 +13,28 @@ local function color(colorscheme)
         hi("NormalFloat", { fg = "#d4be98", bg = "#040404" })
         hi("FloatBorder", { fg = "#d4be98", bg = "#040404" })
 
+        local colors = {
+            darker_black = "#141617",
+            black = "#1d2021",
+            black2 = "#282828",
+            white = "#ddc7a1",
+            red = "#ea6962",
+            green = "#a9b665",
+            yellow = "#d8a657"
+        }
+        hi("TelescopeBorder", { fg = colors.darker_black, bg = colors.darker_black, })
+        hi("TelescopePromptBorder", { fg = colors.black2, bg = colors.black2, })
+        hi("TelescopePromptNormal", { fg = colors.white, bg = colors.black2, })
+        hi("TelescopePromptPrefix", { fg = colors.white, bg = colors.black2, })
+        hi("TelescopeNormal", { bg = colors.darker_black })
+        hi("TelescopePreviewTitle", { fg = colors.darker_black, bg = colors.darker_black, })
+        hi("TelescopePromptTitle", { fg = colors.black2, bg = colors.black2, })
+        hi("TelescopeResultsTitle", { fg = colors.darker_black, bg = colors.darker_black, })
+        hi("TelescopeSelection", { bg = colors.black2, fg = colors.white })
+        hi("TelescopeResultsDiffAdd", { fg = colors.green, })
+        hi("TelescopeResultsDiffChange", { fg = colors.yellow, })
+        hi("TelescopeResultsDiffDelete", { fg = colors.red, })
+
         vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
             vim.lsp.handlers.hover,
             { border = "solid", }

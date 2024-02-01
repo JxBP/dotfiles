@@ -10,7 +10,7 @@ return {
         },
         opts = {
             defaults = {
-                -- borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+                borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
                 layout_strategy = "horizontal",
                 layout_config = {
                     horizontal = {
