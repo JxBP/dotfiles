@@ -10,7 +10,7 @@ alias ls='eza -lFHg'
 alias mount_htb="sshfs jxbp@192.168.122.145:htb $HOME/htb"
 alias mount_onedrive="rclone mount OneDrive:/ $HOME/Documents/Schule/OneDrive --vfs-cache-mode full"
 alias mount_schule="rclone mount OneDrive:/Schule/Q12 $HOME/Documents/Schule/Q12 --vfs-cache-mode full"
-alias neovide='/usr/bin/neovide --multigrid --frame none --maximized'
+# alias neovide='/usr/local/bin/neovide --multigrid --frame none --maximized'
 alias serve="python3 -m http.server"
 alias ssh='TERM=xterm-256color ssh'
 alias vim='nvim'
