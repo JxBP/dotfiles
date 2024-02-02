@@ -47,6 +47,7 @@ export setopt appendhistory
 
 export DOTFILES="$HOME/dotfiles"
 
+typeset -a PATH_DIRS
 PATH_DIRS=(
     "$HOME/.local/bin/"
     "$XDG_CONFIG_HOME/emacs/bin"
@@ -55,5 +56,14 @@ PATH_DIRS=(
     "$XDG_DATA_HOME/bob/nvim-bin"
     "$XDG_DATA_HOME/npm/bin"
     "$DOTFILES/_bin"
-)
-export PATH="$PATH:$(IFS=: ; echo "${PATH_DIRS[*]}")"
+);
+# This setup avoids adding directories that were already in PATH
+for dir ("$PATH_DIRS[@]") do 
+    case ":$PATH:" in
+        *:"$dir":*)
+            ;;
+        *)
+            export PATH="$PATH:$dir"
+            ;;
+    esac
+done
