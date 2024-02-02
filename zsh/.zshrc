@@ -14,9 +14,15 @@ done
 bindkey -e
 bindkey -s '^j' 'ls^M'
 
+####################
 # See https://stackoverflow.com/questions/444951/zsh-stop-backward-kill-word-on-directory-delimiter
 autoload -U select-word-style
 select-word-style bash
+
+zle -N backward-kill-space-word backward-kill-word-match
+zstyle :zle:backward-kill-space-word word-style shell
+bindkey '^W' backward-kill-space-word
+####################
 
 fe() {
     file="$(fd . ${2:-.} | fzf-tmux --query="$1" --multi --select-1 --exit-0)"
